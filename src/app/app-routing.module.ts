@@ -15,6 +15,7 @@ import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
+  {path: 'ba-pwa/home', component: HomeComponent},
   {path: 'offline-usage', component: OfflineUsageComponent},
   {path: 'bluetooth', component: BluetoothComponent},
   {path: 'camera', component: CameraComponent},
@@ -24,8 +25,8 @@ const routes: Routes = [
   {path: 'push-notifications', component: PushNotificationsComponent},
   {path: 'share', component: ShareComponent},
   {path: 'vibration', component: VibrationComponent},
-  {path: '',   redirectTo: '/home', pathMatch: 'full'},
-  {path: '**', component: PageNotFoundComponent}
+  /*{path: '',   redirectTo: '/home', pathMatch: 'full'},*/
+  /*{path: '**', component: PageNotFoundComponent}*/
 ];
 
 @NgModule({
