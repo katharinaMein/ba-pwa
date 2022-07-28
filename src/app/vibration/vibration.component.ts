@@ -12,4 +12,7 @@ export class VibrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onVibrate(){
+    window.navigator.vibrate(200);
+  }
 }
