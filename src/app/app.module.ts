@@ -46,7 +46,6 @@ import {APP_BASE_HREF} from "@angular/common";
     })
   ],
   providers: [
-    {provide: APP_BASE_HREF, useValue: environment.production ? 'ba-pwa' : ''}
   ],
   bootstrap: [AppComponent]
 })
