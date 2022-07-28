@@ -1,0 +1,11 @@
+<a routerLink="/home">zurück</a>
+<h2>Zugriff auf Kamera</h2>
+<p>
+  <label for="imageFile">Mache ein Foto und lade es hoch.</label>
+  <input type="button" id="loadFileXml" value="Foto aufnehmen" (click)="fileChooser.click()" />
+  <input #fileChooser type="file" style="display:none;" id="imageFile" capture="user" accept="image/*" (input)="onChange($event)">
+</p>
+<img *ngIf="src" [src]="src" alt="" class="takenPhoto">
+
+
+
