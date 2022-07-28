@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {OfflineUsageComponent} from "./offline-usage/offline-usage.component";
 import {BluetoothComponent} from "./bluetooth/bluetooth.component";
 import {CameraComponent} from "./camera/camera.component";
@@ -9,14 +9,11 @@ import {LocationComponent} from "./location/location.component";
 import {PushNotificationsComponent} from "./push-notifications/push-notifications.component";
 import {ShareComponent} from "./share/share.component";
 import {VibrationComponent} from "./vibration/vibration.component";
-import {AppComponent} from "./app.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'ba-pwa/home', component: HomeComponent},
   {path: 'offline-usage', component: OfflineUsageComponent},
   {path: 'bluetooth', component: BluetoothComponent},
   {path: 'camera', component: CameraComponent},
@@ -26,12 +23,13 @@ const routes: Routes = [
   {path: 'push-notifications', component: PushNotificationsComponent},
   {path: 'share', component: ShareComponent},
   {path: 'vibration', component: VibrationComponent},
-  /*{path: '',   redirectTo: '/home', pathMatch: 'full'},*/
-  /*{path: '**', component: PageNotFoundComponent}*/
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { enableTracing: true})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
