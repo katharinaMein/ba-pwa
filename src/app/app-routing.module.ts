@@ -20,7 +20,7 @@ const routes: Routes = [
   {path: 'microphone', component: MicrophoneComponent},
   {path: 'local-files', component: LocalFilesComponent},
   {path: 'location', component: LocationComponent},
-  {path: 'push-notifications', component: PushNotificationsComponent},
+  {path: 'push-notification', component: PushNotificationsComponent},
   {path: 'share', component: ShareComponent},
   {path: 'vibration', component: VibrationComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
