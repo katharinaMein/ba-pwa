@@ -17,6 +17,7 @@ import { LocationComponent } from './location/location.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from "@angular/common/http";
+import {APP_BASE_HREF} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -44,7 +45,9 @@ import {HttpClientModule} from "@angular/common/http";
       registrationStrategy: 'registerWhenStable:30000'
     })
   ],
-  providers: [],
+  providers: [
+    {provide: APP_BASE_HREF, useValue: environment.production ? 'ba-pwa' : ''}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
