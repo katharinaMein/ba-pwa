@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from "@angular/common/http";
 import {APP_BASE_HREF} from "@angular/common";
 import {ReactiveFormsModule} from "@angular/forms";
+import { ContactsComponent } from './contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     VibrationComponent,
     LocationComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ import {ShareComponent} from "./share/share.component";
 import {VibrationComponent} from "./vibration/vibration.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {HomeComponent} from "./home/home.component";
+import {ContactsComponent} from "./contacts/contacts.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'push-notification', component: PushNotificationsComponent},
   {path: 'share', component: ShareComponent},
   {path: 'vibration', component: VibrationComponent},
+  {path: 'contacts', component: ContactsComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 ];

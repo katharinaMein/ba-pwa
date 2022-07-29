@@ -1,0 +1,66 @@
+@primary-color: #005EA7;
+@text-color: #252525;
+@light-text-color: #ABABAB;
+@accent-color: #FFAE53;
+@disabled-color: #ABCAE2;
+
+.main-container {
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Calibri, sans-serif;
+  color: @text-color;
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .main-header{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .instruction{
+    font-size: 16px;
+    font-weight: lighter;
+    margin-top: 0;
+    margin-block-start: 0;
+    color: @light-text-color;
+    margin-bottom: 54px;
+  }
+
+  .button{
+    color: white;
+    margin-bottom: 19px;
+    text-decoration: none;
+    text-align: center;
+    max-width: 270px;
+    min-width: 270px;
+    padding: 18px;
+    font-size: 22px;
+    border-radius: 10px;
+  }
+
+  .button-primary{
+    background-color: @primary-color;
+
+    &:active{
+      background-color: @accent-color;
+    }
+  }
+
+  .button-disabled{
+    background-color: @disabled-color;
+
+    &:hover{
+      cursor: not-allowed;
+    }
+  }
+}
+
+
