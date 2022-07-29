@@ -1,1 +1,18 @@
-<p>local-files works!</p>
+<div class="main-container">
+  <a routerLink="/home">zurück</a>
+  <div class="header-container">
+    <p class="main-header">Zugriff auf lokale Dateien</p>
+    <p class="instruction">Klicke den Button, um eine auf deinem Gerät gespeichertes Bild auszuwählen und hier einzufügen.</p>
+  </div>
+  <div class="content-container">
+    <div class="image-container">
+      <img src="">
+    </div>
+    <button class="button button-primary" (click)="imageChooser.click()">Bild auswählen</button>
+    <input #imageChooser type="file"
+           accept="image/png, image/jpeg, image/jpg, image/gif"
+           style="display: none">
+  </div>
+</div>
+
+
