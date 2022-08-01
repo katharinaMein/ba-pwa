@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FileReaderService} from "../file-reader.service";
+import {Observable, of} from "rxjs";
 
 @Component({
   selector: 'app-camera',
@@ -7,24 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CameraComponent implements OnInit {
 
-  src: any;
-  constructor() { }
+  src$: Observable<any> = of('');
+  constructor(private frService: FileReaderService) { }
 
   ngOnInit(): void {
 
   }
 
-  async onChange(event: any) {
-    const reader = new FileReader();
-
-    reader.onload = (event: any) => {
-      this.src = event.target.result;
-    };
-
-    reader.onerror = (event: any) => {
-      console.log("File could not be read: " + event.target.error.code);
-    };
-
-    reader.readAsDataURL(event.target.files[0]);
+  onChange(event: Event){
+    this.src$ = this.frService.onChange(event);
   }
 }

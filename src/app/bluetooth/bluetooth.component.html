@@ -1,1 +1,10 @@
-<p>bluetooth works!</p>
+<div class="main-container">
+  <a routerLink="/home">zurück</a>
+  <div class="header-container">
+    <p class="main-header">Zugriff auf Bluetooth</p>
+    <p class="instruction">Stelle sicher, dass Bluetooth auf deinem Gerät eingeschaltet ist. Klicke anschließend den Button, um dich mit einem anderen Gerät zu verbinden und zu sehen, wie der Ladestand dieses Geräts ist.</p>
+  </div>
+  <div class="content-container">
+    <button class="button button-primary" (click)="onRequestDevice()">Mit anderem Gerät verbinden</button>
+  </div>
+</div>
