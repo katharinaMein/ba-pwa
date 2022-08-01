@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BluetoothComponent implements OnInit {
   options = {
-    filters: [{name: 'SoundCore mini'}],
-    optionalServices: ['battery_service']
+    acceptAllDevices: true
   }
 
   bluetoothAvailable!: boolean;
@@ -21,7 +20,6 @@ export class BluetoothComponent implements OnInit {
       this.bluetoothAvailable = true;
     } else {
       this.bluetoothAvailable = false;
-      console.log('Bluetooth is not available')
     }
   }
 
