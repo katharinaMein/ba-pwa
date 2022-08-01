@@ -7,4 +7,5 @@
   <div class="content-container">
     <button class="button button-primary" (click)="onRequestDevice()">Mit anderem Gerät verbinden</button>
   </div>
+  <span *ngIf="battery">Battery: {{battery}}%</span>
 </div>
