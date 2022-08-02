@@ -1,1 +1,13 @@
-<p>share works!</p>
+<div class="main-container">
+  <a routerLink="/home">zurück</a>
+  <div class="header-container">
+    <p class="main-header">Teilen mit einer anderen App</p>
+    <p class="instruction">Gib einen Text ein und klicke anschließend auf den "Share"-Button, um ihn mit einer anderen App zu teilen.</p>
+  </div>
+  <div class="content-container">
+    <label for="shareText">Text eingeben:</label>
+    <input #shareInput type="text" id="shareText">
+    <button class="button button-primary" (click)="onShareText(shareInput.value)">Share</button>
+    <p *ngIf="errorCaught">Hoppla, da ist etwas schief gelaufen.</p>
+  </div>
+</div>
