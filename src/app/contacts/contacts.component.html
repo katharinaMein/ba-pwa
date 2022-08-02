@@ -1,3 +1,16 @@
-<a routerLink="/home">zurück</a>
+<div class="main-container">
+  <a routerLink="/home">zurück</a>
+  <div class="header-container">
+    <p class="main-header">Zugriff auf Kontakte</p>
+    <p *ngIf="!contactsAvailable" class="instruction">Leider ist diese Funktion auf deinem Gerät nicht verfügbar. Bitte versuche es mit einem Gerät, das den Zugriff auf die Contact Picker API unterstützt.</p>
+    <p *ngIf="contactsAvailable" class="instruction">Klicke auf den Button, um auf deinem Gerät gespeicherte Kontakte auszuwählen und hier anzeigen zu lassen.</p>
+  </div>
+  <div class="content-container">
+    <button *ngIf="contactsAvailable" class="button button-primary" (click)="onGetContacts()">Kontakte auswählen</button>
+    <button *ngIf="!contactsAvailable" class="button button-disabled">Kontakte auswählen</button>
+    <div *ngIf="contacts" class="contacts-container">
+      <p *ngFor="let c of contacts" class="contact">{{c.name}}, Tel.: {{c.tel}}</p>
+    </div>
+  </div>
+</div>
 
-<h2>Zugriff auf Kontakte</h2>
