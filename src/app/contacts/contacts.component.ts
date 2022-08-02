@@ -19,9 +19,8 @@ export class ContactsComponent implements OnInit {
     }
   }
 
-  onGetContacts(){
-    this.contacts = (navigator as any).contacts.select(this.contactProperties, this.options);
-    debugger;
+  async onGetContacts(){
+    this.contacts = await (navigator as any).contacts.select(this.contactProperties, this.options);
   }
 
 }
