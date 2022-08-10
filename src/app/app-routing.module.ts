@@ -13,6 +13,7 @@ import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {HomeComponent} from "./home/home.component";
 import {ContactsComponent} from "./contacts/contacts.component";
 import {WakeLockComponent} from "./wake-lock/wake-lock.component";
+import {CodeDetectionComponent} from "./code-detection/code-detection.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'vibration', component: VibrationComponent},
   {path: 'contacts', component: ContactsComponent},
   {path: 'wake-lock', component: WakeLockComponent},
+  {path: 'code-detection', component: CodeDetectionComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 ];

@@ -21,6 +21,7 @@ import {APP_BASE_HREF} from "@angular/common";
 import {ReactiveFormsModule} from "@angular/forms";
 import { ContactsComponent } from './contacts/contacts.component';
 import { WakeLockComponent } from './wake-lock/wake-lock.component';
+import { CodeDetectionComponent } from './code-detection/code-detection.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { WakeLockComponent } from './wake-lock/wake-lock.component';
     PageNotFoundComponent,
     HomeComponent,
     ContactsComponent,
-    WakeLockComponent
+    WakeLockComponent,
+    CodeDetectionComponent
   ],
   imports: [
     BrowserModule,
