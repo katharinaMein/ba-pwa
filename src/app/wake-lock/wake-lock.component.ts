@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wake-lock.component.less']
 })
 export class WakeLockComponent implements OnInit {
-  button: {text: string} = {text: 'Activate Screen Wake Lock'};
+  button: {text: string} = {text: 'Aktiviere Screen Wake Lock'};
   wakeLockActivated: boolean = false;
-  wakeLock = null;
+  wakeLock: any = null;
+  activatedText: string = 'Screen Wake Lock ist nun aktiviert. Der Bildschirm sperrt sich nicht mehr.'
+  deactivatedText: string = 'Screen Wake Lock ist gerade nicht aktiviert. Der Bildschirm sollte sich nach einer gewissen Zeit sperren.'
+  infoText: string = this.deactivatedText;
 
   constructor() { }
 
@@ -17,12 +20,16 @@ export class WakeLockComponent implements OnInit {
 
   onToggleWakeLock(){
     if(this.wakeLockActivated){
+      this.wakeLock.release();
+      this.wakeLock = null;
       this.wakeLockActivated = false;
-      this.button.text = 'Activate Screen Wake Lock';
+      this.button.text = 'Aktiviere Screen Wake Lock';
+      this.infoText = this.deactivatedText;
     }else{
       this.wakeLock = (navigator as any).wakeLock.request('screen');
-      this.button.text = 'Deactivate Screen Wake Lock';
+      this.button.text = 'Deaktiviere Screen Wake Lock';
       this.wakeLockActivated = true;
+      this.infoText = this.activatedText;
     }
   }
 }
