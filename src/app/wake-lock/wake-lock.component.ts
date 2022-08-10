@@ -18,6 +18,14 @@ export class WakeLockComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngOnDestroy(): void {
+    this.wakeLock.release();
+    this.wakeLock = null;
+    this.wakeLockActivated = false;
+    this.button.text = 'Aktiviere Screen Wake Lock';
+    this.infoText = this.deactivatedText;
+  }
+
   onToggleWakeLock(){
     if(this.wakeLockActivated){
       this.wakeLock.release();
