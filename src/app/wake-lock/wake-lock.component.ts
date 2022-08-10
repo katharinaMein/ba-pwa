@@ -19,6 +19,21 @@ export class WakeLockComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
+    this.onReleaseWakeLock();
+  }
+
+  async onToggleWakeLock(){
+    if(this.wakeLockActivated){
+      this.onReleaseWakeLock();
+    }else{
+      await this.onRequestWakeLock();
+    }
+  }
+
+  onReleaseWakeLock(){
+    this.wakeLock.addEventListener('release', () => {
+      console.log('Release-Event added to wakeLock')
+    });
     this.wakeLock.release();
     this.wakeLock = null;
     this.wakeLockActivated = false;
@@ -26,18 +41,10 @@ export class WakeLockComponent implements OnInit {
     this.infoText = this.deactivatedText;
   }
 
-  onToggleWakeLock(){
-    if(this.wakeLockActivated){
-      this.wakeLock.release();
-      this.wakeLock = null;
-      this.wakeLockActivated = false;
-      this.button.text = 'Aktiviere Screen Wake Lock';
-      this.infoText = this.deactivatedText;
-    }else{
-      this.wakeLock = (navigator as any).wakeLock.request('screen');
-      this.button.text = 'Deaktiviere Screen Wake Lock';
-      this.wakeLockActivated = true;
-      this.infoText = this.activatedText;
-    }
+  async onRequestWakeLock(){
+    this.wakeLock = await (navigator as any).wakeLock.request('screen');
+    this.button.text = 'Deaktiviere Screen Wake Lock';
+    this.wakeLockActivated = true;
+    this.infoText = this.activatedText;
   }
 }
