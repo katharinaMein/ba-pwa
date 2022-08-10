@@ -26,34 +26,7 @@ export class BluetoothComponent implements OnInit {
     }
   }
 
-  onRequestDevice() {
-    if (this.bluetoothAvailable) {
-      navigator.bluetooth.requestDevice(this.options).then(device => device.gatt?.connect())
-        .then(async (server: BluetoothRemoteGATTServer | undefined) => {
-            return server?.getPrimaryService('battery_service');
-          }
-        )
-        .then(service => {
-            return service?.getCharacteristic('battery_level');
-          }
-        )
-        .then(characteristics => {
-            return characteristics?.readValue();
-          }
-        )
-        .then((value) => {
-            console.log('The battery level of the connected device is: ' + value?.getInt8(0) + '%');
-          }
-        )
-        .catch(error => {
-          console.log(error);
-        })
-    } else {
-      console.log('Can´t do this, because Bluetooth is not available :(')
-    }
-  }
-
-  async onRequestDevice2() {
+  async onRequestDevice() {
     if (this.bluetoothAvailable) {
       const device = await navigator.bluetooth.requestDevice(this.options);
       const server = await device.gatt?.connect();
@@ -69,6 +42,6 @@ export class BluetoothComponent implements OnInit {
   }
 
   getBattery() {
-    this.onRequestDevice2().then(val => this.battery = val);
+    this.onRequestDevice().then(val => this.battery = val);
   }
 }

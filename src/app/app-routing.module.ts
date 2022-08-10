@@ -12,6 +12,7 @@ import {VibrationComponent} from "./vibration/vibration.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {HomeComponent} from "./home/home.component";
 import {ContactsComponent} from "./contacts/contacts.component";
+import {WakeLockComponent} from "./wake-lock/wake-lock.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'share', component: ShareComponent},
   {path: 'vibration', component: VibrationComponent},
   {path: 'contacts', component: ContactsComponent},
+  {path: 'wake-lock', component: WakeLockComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 ];

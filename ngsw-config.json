@@ -13,18 +13,6 @@
         "maxAge": "3d",
         "timeout": "3000"
       }
-    },
-    {
-      "name": "offline-usage",
-      "urls": [
-        "/offline-usage"
-      ],
-      "cacheConfig": {
-        "strategy": "performance",
-        "maxSize": 100,
-        "maxAge": "3d",
-        "timeout": "3000"
-      }
     }
   ],
   "assetGroups": [

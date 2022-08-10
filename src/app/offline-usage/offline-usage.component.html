@@ -1,8 +1,20 @@
-<a routerLink="/home">zurück</a>
+<div class="main-container">
+  <a class="home" routerLink="/home">&#8678;</a>
+  <div class="header-container">
+    <p class="main-header">Offline-Nutzung</p>
+    <p class="instruction">Nachdem die Namens-Liste geladen wurde, schalte die Netzwerkverbindung ab und verlasse
+      die App. Wenn du die App nun erneut öffnest, kannst du sie weiterhin benutzen und siehst Namen
+      immernoch. Schuld daran ist der Service Worker, der die über einen HTTP-Request geladenen
+      Namen gecachet hat.</p>
+  </div>
 
-<h1>Offline-Nutzung</h1>
-<div>
-  <p *ngFor="let user of usersArray$ | async">
-    <span>{{user.firstName + " " + user.lastName}}</span>
-  </p>
+  <div class="content-container">
+    <div class="name-list">
+      <p *ngFor="let user of (usersArray$ | async)" class="name-list-item">
+        <span>{{user.firstName + " " + user.lastName}}</span>
+      </p>
+    </div>
+  </div>
 </div>
+
+

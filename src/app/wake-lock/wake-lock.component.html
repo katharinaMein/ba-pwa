@@ -1,0 +1,10 @@
+<div class="main-container">
+  <a routerLink="/home">zurück</a>
+  <div class="header-container">
+    <p class="main-header">Screen Wake Lock</p>
+    <p class="instruction">Klicke den Button, um Screen Wake Lock zu aktivieren und wieder zu deaktivieren.</p>
+  </div>
+  <div class="content-container">
+    <button class="button button-primary" (click)="onToggleWakeLock()">{{button.text}}</button>
+  </div>
+</div>

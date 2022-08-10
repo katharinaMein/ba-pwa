@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1659456677898,
+  "timestamp": 1660125336025,
   "index": "/ba-pwa/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/ba-pwa/favicon.ico",
         "/ba-pwa/index.html",
-        "/ba-pwa/main.a13300b5a86ebc49.js",
+        "/ba-pwa/main.aa09f6f75dc94e12.js",
         "/ba-pwa/manifest.webmanifest",
         "/ba-pwa/polyfills.c72ffd0b1b25a607.js",
         "/ba-pwa/runtime.0218618c8ada86e1.js",
-        "/ba-pwa/styles.6e9d63fc6e689002.css"
+        "/ba-pwa/styles.b4d647ec5eefa433.css"
       ],
       "patterns": []
     },
@@ -62,20 +62,6 @@
         "ignoreVary": true
       },
       "version": 1
-    },
-    {
-      "name": "offline-usage",
-      "patterns": [
-        "\\/offline-usage"
-      ],
-      "strategy": "performance",
-      "maxSize": 100,
-      "maxAge": 259200000,
-      "timeoutMs": 0,
-      "cacheQueryOptions": {
-        "ignoreVary": true
-      },
-      "version": 1
     }
   ],
   "hashTable": {
@@ -95,12 +81,12 @@
     "/ba-pwa/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/ba-pwa/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/ba-pwa/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/ba-pwa/index.html": "bcf1e6d32023c70949bb7e3a8d31d919aba47422",
-    "/ba-pwa/main.a13300b5a86ebc49.js": "2256df67c3f24a90b3505095801200d795acc663",
+    "/ba-pwa/index.html": "8a9e1d391843eab46579642c9e504a9d6228ac54",
+    "/ba-pwa/main.aa09f6f75dc94e12.js": "f0ab3a5a093a5e37bcc8171d0390353770ce6ba2",
     "/ba-pwa/manifest.webmanifest": "db148638d8f2638ca6a02d97a5d4d07e504ae462",
     "/ba-pwa/polyfills.c72ffd0b1b25a607.js": "d4ec0890f55d7dfcfbff09e25283d7d949f7c4e5",
     "/ba-pwa/runtime.0218618c8ada86e1.js": "cde4e74a96938725dbcff3138e88c885963ac980",
-    "/ba-pwa/styles.6e9d63fc6e689002.css": "b5352fb1c1745ff03ff42b977143d504110348f8"
+    "/ba-pwa/styles.b4d647ec5eefa433.css": "e2af11ce5669702df7345bf14f21bdf056547269"
   },
   "navigationUrls": [
     {
