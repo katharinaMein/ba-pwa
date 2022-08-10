@@ -11,6 +11,7 @@ export class CodeDetectionComponent implements OnInit {
   barcodeDecSupported!: boolean;
   src$: Observable<any> = of('');
   image = document.querySelector('img');
+  barcodeContent: any[] = [];
 
   constructor(private frService: FileReaderService) { }
 
@@ -31,11 +32,11 @@ export class CodeDetectionComponent implements OnInit {
   onScanBarcode(){
     if(this.barcodeDecSupported){
 
-      // @ts-ignore
+      // @ts-expect-error
       const barcodeDetector: any = new BarcodeDetector({formats: ['qr_code']});
       barcodeDetector.detect(this.image!)
         .then((barcodes: any[]) => {
-          barcodes.forEach((barcode) => console.log(barcode.rawData));
+          barcodes.forEach((barcode) => this.barcodeContent.push(barcode.rawData));
         })
         .catch((err: any) => {
           console.log(err);
