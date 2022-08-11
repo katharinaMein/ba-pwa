@@ -10,7 +10,6 @@ import {FileReaderService} from "../file-reader.service";
 export class CodeDetectionComponent implements OnInit {
   barcodeDecSupported!: boolean;
   src$: Observable<any> = of('');
-  image = document.querySelector('img');
   barcodeContent: any[] = [];
 
   constructor(private frService: FileReaderService) { }
@@ -30,19 +29,22 @@ export class CodeDetectionComponent implements OnInit {
   }
 
   onScanBarcode(){
+    const image = document.getElementById('barcodeImage');
+    console.log(image);
+
     if(this.barcodeDecSupported){
       window.alert('in onScanBarcode Methode, in if barcodeDecSupported = true');
 
       // @ts-expect-error
       const barcodeDetector: any = new BarcodeDetector({formats: ['qr_code']});
       window.alert(barcodeDetector);
-      barcodeDetector.detect(this.image!)
+      barcodeDetector.detect(image!)
         .then((barcodes: any[]) => {
           barcodes.forEach((barcode) => this.barcodeContent.push(barcode.rawData));
       window.alert(this.barcodeContent);
         })
         .catch((err: any) => {
-          console.log(err);
+          alert(err);
         })
     }
   }
