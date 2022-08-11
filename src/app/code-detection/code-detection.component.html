@@ -7,13 +7,13 @@
   <div class="content-container">
     <button class="button button-primary" (click)="fileChooser.click()">Foto aufnehmen</button>
     <input #fileChooser type="file" style="display:none;" id="imageFile" capture="user" accept="image/*" (input)="onChangeImage($event)">
- <!--   <img *ngIf="src$ | async as src" [src]="src" class="takenPhoto"> -->
-    <img src="./assets/icons/frame.png" class="takenPhoto" id="barcodeImage">
-    <button class="button button-primary" (click)="onScanBarcode()">QR-Code scannen</button>
-    <div *ngIf="barcodeContent.length > 0">
-      <div *ngFor="let b of barcodeContent">
-        <p>{{b}}</p>
-      </div>
-    </div>
-  </div>
-</div>
+    <img *ngIf="src$ | async as src" [src]="src" class="takenPhoto">
+    <!--   <img src="./assets/icons/frame.png" class="takenPhoto" id="barcodeImage"> -->
+       <button class="button button-primary" (click)="onScanBarcode()">QR-Code scannen</button>
+       <div *ngIf="barcodeContent.length > 0">
+         <div *ngFor="let b of barcodeContent">
+           <a href="{{b}}">{{b}}</a>
+         </div>
+       </div>
+     </div>
+   </div>
