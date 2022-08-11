@@ -30,7 +30,6 @@ export class CodeDetectionComponent implements OnInit {
 
   onScanBarcode(){
     const image = document.getElementById('barcodeImage');
-    console.log(image);
 
     if(this.barcodeDecSupported){
       window.alert('in onScanBarcode Methode, in if barcodeDecSupported = true');
@@ -40,6 +39,9 @@ export class CodeDetectionComponent implements OnInit {
       window.alert(barcodeDetector);
       barcodeDetector.detect(image!)
         .then((barcodes: any[]) => {
+          let pre = document.createElement("pre");
+          pre.innerHTML = JSON.stringify(barcodes, null, 2);
+          image!.after(pre);
           barcodes.forEach((barcode) => this.barcodeContent.push(barcode.rawValue));
         })
         .catch((err: any) => {
