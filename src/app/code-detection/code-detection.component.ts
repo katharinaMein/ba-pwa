@@ -42,7 +42,7 @@ export class CodeDetectionComponent implements OnInit {
           let pre = document.createElement("pre");
           pre.innerHTML = JSON.stringify(barcodes, null, 2);
           image!.after(pre);
-          barcodes.forEach((barcode) => this.barcodeContent.push(barcode.rawValue));
+          barcodes.forEach((barcode) => this.barcodeContent.push(barcode.format));
         })
         .catch((err: any) => {
           alert('Errormessage:' + err);
