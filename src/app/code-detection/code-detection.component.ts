@@ -35,10 +35,10 @@ export class CodeDetectionComponent implements OnInit {
 
       // @ts-expect-error
       const barcodeDetector: any = new BarcodeDetector({formats: ['qr_code']});
-      barcodeDetector.detect(this.src$)
+      barcodeDetector.detect(this.image!)
         .then((barcodes: any[]) => {
           barcodes.forEach((barcode) => this.barcodeContent.push(barcode.rawData));
-          window.alert(this.barcodeContent);
+      window.alert(this.barcodeContent);
         })
         .catch((err: any) => {
           console.log(err);
