@@ -40,11 +40,11 @@ export class CodeDetectionComponent implements OnInit {
       window.alert(barcodeDetector);
       barcodeDetector.detect(image!)
         .then((barcodes: any[]) => {
-          barcodes.forEach((barcode) => this.barcodeContent.push(barcode.rawData));
-      window.alert(this.barcodeContent + 'Barcodecontent');
+          barcodes.forEach((barcode) => this.barcodeContent.push(barcode));
+      window.alert('Barcodecontent:' + this.barcodeContent);
         })
         .catch((err: any) => {
-          alert(err + 'Errormessage');
+          alert('Errormessage:' + err);
         })
     }
   }
