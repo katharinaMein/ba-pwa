@@ -10,7 +10,7 @@
       Anschließend wird dir der aktuelle Akkustand des Geräts angezeigt.</p>
   </div>
   <div class="content-container">
-    <button *ngIf="bluetoothAvailable" class="button button-primary" (click)="getBattery()">Mit Gerät verbinden</button>
+    <button *ngIf="bluetoothAvailable" class="button button-primary" (click)="onGetBattery()">Mit Gerät verbinden</button>
     <button *ngIf="!bluetoothAvailable" class="button button-disabled">Mit anderem Gerät verbinden</button>
   </div>
   <span *ngIf="battery">Battery: {{battery}}%</span>

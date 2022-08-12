@@ -41,7 +41,7 @@ export class BluetoothComponent implements OnInit {
     }
   }
 
-  getBattery() {
+  onGetBattery() {
     this.onRequestDevice().then(val => this.battery = val);
   }
 }

@@ -22,6 +22,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { ContactsComponent } from './contacts/contacts.component';
 import { WakeLockComponent } from './wake-lock/wake-lock.component';
 import { CodeDetectionComponent } from './code-detection/code-detection.component';
+import { AuthenticationComponent } from './authentication/authentication.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CodeDetectionComponent } from './code-detection/code-detection.componen
     HomeComponent,
     ContactsComponent,
     WakeLockComponent,
-    CodeDetectionComponent
+    CodeDetectionComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
