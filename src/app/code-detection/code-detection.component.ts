@@ -32,11 +32,8 @@ export class CodeDetectionComponent implements OnInit {
     const image = document.getElementById('barcodeImage');
 
     if(this.barcodeDecSupported){
-      window.alert('in onScanBarcode Methode, in if barcodeDecSupported = true');
-
       // @ts-expect-error
       const barcodeDetector: any = new BarcodeDetector({formats: ['qr_code']});
-      window.alert(barcodeDetector);
       barcodeDetector.detect(image!)
         .then((barcodes: any[]) => {
           barcodes.forEach((barcode) => this.barcodeContent.push(barcode.rawValue));

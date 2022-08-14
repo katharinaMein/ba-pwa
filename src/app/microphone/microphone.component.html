@@ -1,5 +1,15 @@
-<a routerLink="/home">zurück</a>
 
-<h2>Zugriff auf Mikrofon</h2>
-<button id="record">Record</button>
-<div id="sound-clip"></div>
+<div class="main-container">
+  <a class="home" routerLink="/home">&#8678;</a>
+  <div class="header-container">
+    <p class="main-header">Zugriff auf Mikrofon</p>
+    <p class="instruction">Klicke den Button, um eine Audioaufnahme zu starten und zu stoppen.</p>
+  </div>
+
+  <div class="content-container">
+    <button class="button" [ngClass]="microphoneIsAvailable ? 'button-primary' : 'button-disabled'" (click)="onClickRecordButton()">
+      {{ recording ? "Aufnahme stoppen" : "Audio aufnehmen"}}</button>
+    <p *ngIf="recording">Audio wird aufgenommen...</p>
+    <audio *ngIf="recordedAudio && !recording" [src]="sanitizer.bypassSecurityTrustResourceUrl(recordedAudio)" controls></audio>
+  </div>
+</div>

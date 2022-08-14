@@ -1,1 +1,2 @@
-<p>authentication works!</p>
+<button *ngIf="!authenticatedSuccesful" (click)="onBtn()">Authenticate</button>
+<p *ngIf="authenticatedSuccesful">Erfolgreich eingeloggt! 👌</p>

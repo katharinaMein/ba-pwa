@@ -20,7 +20,7 @@ export class ContactsComponent implements OnInit {
   }
 
   async onGetContacts(){
-    this.contacts = await (navigator as any).contacts.select(this.contactProperties, this.options);
+    this.contacts = await (navigator as any).contacts
+      .select(this.contactProperties, this.options);
   }
-
 }

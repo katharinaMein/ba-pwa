@@ -17,22 +17,21 @@ export class PushNotificationsComponent implements OnInit {
 
   async onSendNotification(value: string) {
     if(Notification.permission === 'granted') {
-      this.showNotification(value);
+      this.showMyNotification(value);
     }
     else {
       if(Notification.permission !== 'denied') {
         const permission = await Notification.requestPermission();
 
         if(permission === 'granted') {
-          this.showNotification(value);
+          this.showMyNotification(value);
         }
       }
     }
   };
 
-  showNotification(body: string){
+  showMyNotification(body: string){
     const title = 'Deine Check Mobile Push-Notification';
-
     const payload = {
       body: body
     };
