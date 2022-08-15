@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1660575137698,
+  "timestamp": 1660576100821,
   "index": "/ba-pwa/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/ba-pwa/favicon.ico",
         "/ba-pwa/index.html",
-        "/ba-pwa/main.9b3dc11e40ac8597.js",
+        "/ba-pwa/main.7c905342ee414e83.js",
         "/ba-pwa/manifest.webmanifest",
         "/ba-pwa/polyfills.c72ffd0b1b25a607.js",
         "/ba-pwa/runtime.0218618c8ada86e1.js",
@@ -85,8 +85,8 @@
     "/ba-pwa/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/ba-pwa/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/ba-pwa/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/ba-pwa/index.html": "9003600ff85d42ac47b352859c579816fb6cb829",
-    "/ba-pwa/main.9b3dc11e40ac8597.js": "eb2a55336c3e052902cdc277da6aa68c2082345c",
+    "/ba-pwa/index.html": "8a46e604c1871427a6a7e6ea48b8ac2d36747a05",
+    "/ba-pwa/main.7c905342ee414e83.js": "5ac4d5c5007de6c2fb3cf991616971aa2606f792",
     "/ba-pwa/manifest.webmanifest": "db148638d8f2638ca6a02d97a5d4d07e504ae462",
     "/ba-pwa/polyfills.c72ffd0b1b25a607.js": "d4ec0890f55d7dfcfbff09e25283d7d949f7c4e5",
     "/ba-pwa/runtime.0218618c8ada86e1.js": "cde4e74a96938725dbcff3138e88c885963ac980",

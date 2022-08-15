@@ -28,7 +28,8 @@ export class AuthenticationComponent {
       "requireResidentKey": false,
       "userVerification": "required"
     },
-    "authenticatorSelection": {"authenticatorAttachment": "platform"}
+    "authenticatorSelection": {"authenticatorAttachment": "platform",
+      "userVerification": "required"}
   };
   authenticatedSuccessful = false;
 
