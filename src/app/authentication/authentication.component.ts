@@ -9,7 +9,7 @@ export class AuthenticationComponent {
   authenticationFailed = false;
 
   private credentialCreationOptions: any = {
-    "rp": {"name": "Check Mobile PWA", "id": "katharinamein.github.io/ba-pwa"},
+    "rp": {"name": "Check Mobile PWA", "id": "katharinamein.github.io"},
     "user": {
       "id": {
         "type": "Buffer",
