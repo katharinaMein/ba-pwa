@@ -1,5 +1,18 @@
-<a routerLink="/home">zurück</a>
 
-<h2>Push-Benachrichtigung</h2>
-<input #notificationInput type="text" >
-<button (click)="onSendNotification(notificationInput.value)">Push-Benachrichtigung senden</button>
+
+<div class="main-container">
+  <a class="home" routerLink="/home">&#8678;</a>
+  <div class="header-container">
+    <p class="main-header">Push-Benachrichtigung senden</p>
+    <p class="instruction">Gib einen Text ein, den du gerne als Push-Benachrichtigung an dein Gerät senden möchtest. Wenn du anschließend den Button klickst, solltest du die Nachricht im Benachrichtigungsbereich deines Geräts finden.</p>
+  </div>
+
+  <div class="content-container">
+    <input #notificationInput class="textInput" type="text" >
+    <button class="button button-primary" (click)="onSendNotification(notificationInput.value)">Senden</button>
+  </div>
+</div>
+
+
+
+

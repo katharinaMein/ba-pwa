@@ -9,7 +9,7 @@
     <button *ngIf="contactsAvailable" class="button button-primary" (click)="onGetContacts()">Kontakte auswählen</button>
     <button *ngIf="!contactsAvailable" class="button button-disabled">Kontakte auswählen</button>
     <div *ngIf="contacts" class="contacts-container">
-      <p *ngFor="let c of contacts" class="contact">{{c.name}}, Tel.: {{c.tel}}</p>
+      <p *ngFor="let c of contacts" class="contact">{{c.name}}, Tel.: {{c.tel[0]}}</p>
     </div>
   </div>
 </div>

@@ -2,12 +2,12 @@
   <a class="home" routerLink="/home">&#8678;</a>
   <div class="header-container">
     <p class="main-header">Zugriff auf Bluetooth</p>
-    <p *ngIf="!bluetoothAvailable" class="instruction">Leider ist auf diesem Gerät zur Zugriff auf die Web Bluetooth API nicht möglich.</p>
+    <p *ngIf="!bluetoothAvailable" class="instruction">Leider ist auf diesem Gerät der Zugriff auf die Web Bluetooth API nicht möglich.</p>
     <p *ngIf="bluetoothAvailable" class="instruction">Da diese Funktion noch im experimentellen Stadium ist, musst du ein paar Dinge beachten, um sie nutzen zu können.
       Stelle sicher, dass Bluetooth auf deinem Gerät eingeschaltet ist. In deiner Nähe muss sich ein Bluetooth Low Energy Gerät mit Battery-Service befinden.
       Verbinde dich zunächst über das Betriebssystem mit dem Gerät, ansonsten ist dieses für die Web Bluetooth API häufig nicht auffindbar.
       Klicke anschließend den Button "Mit Gerät verbinden". Du solltest das Gerät nun in einer Liste finden und kannst dich damit verbinden.
-      Anschließend wird dir der aktuelle Akkustand des Geräts angezeigt.</p>
+      Anschließend wird dir der aktuelle Ladestand des Geräts angezeigt.</p>
   </div>
   <div class="content-container">
     <button *ngIf="bluetoothAvailable" class="button button-primary" (click)="onGetBattery()">Mit Gerät verbinden</button>

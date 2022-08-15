@@ -6,9 +6,10 @@ import {Component} from '@angular/core';
   styleUrls: ['./authentication.component.less']
 })
 export class AuthenticationComponent {
+  authenticationFailed = false;
 
   private credentialCreationOptions: any = {
-    "rp": {"name": "Check Mobile PWA", "id": "localhost", "icon": "./assets/icons/icon-512x512.png"},
+    "rp": {"name": "Check Mobile PWA", "id": "localhost"},
     "user": {
       "id": {
         "type": "Buffer",
@@ -29,16 +30,21 @@ export class AuthenticationComponent {
     },
     "authenticatorSelection": {"authenticatorAttachment": "platform"}
   };
-  authenticatedSuccesful = false;
+  authenticatedSuccessful = false;
 
-  async onBtn() {
+  async onAuthenticate() {
     this.credentialCreationOptions.challenge = new Uint8Array(this.credentialCreationOptions.challenge.data);
     this.credentialCreationOptions.user.id = new Uint8Array(this.credentialCreationOptions.user.id.data);
-    this.credentialCreationOptions.user.name = 'pwa@example.com';
-    this.credentialCreationOptions.user.displayName = 'What PWA Can Do Today';
+    this.credentialCreationOptions.user.name = 'Registrierter Nutzer des Systems';
+    this.credentialCreationOptions.user.displayName = 'Check Mobile PWA';
 
-    await navigator.credentials.create({publicKey: this.credentialCreationOptions});
-    this.authenticatedSuccesful = true;
+    try{
+      await navigator.credentials.create({publicKey: this.credentialCreationOptions})
+      this.authenticatedSuccessful = true;
+    }catch (e: any){
+      console.log(e);
+      this.authenticatedSuccessful = false;
+      this.authenticationFailed = true;
+    }
   }
-
 }

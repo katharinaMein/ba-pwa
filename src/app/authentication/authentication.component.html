@@ -1,2 +1,13 @@
-<button *ngIf="!authenticatedSuccesful" (click)="onBtn()">Authenticate</button>
-<p *ngIf="authenticatedSuccesful">Erfolgreich eingeloggt! 👌</p>
+
+<div class="main-container">
+  <a class="home" routerLink="/home">&#8678;</a>
+  <div class="header-container">
+    <p class="main-header">Zugriff auf Kontakte</p>
+    <p class="instruction">Klicke den Button, um die auf deinem Gerät präferierte passwortlose Authentifizierung zu verwenden und dich als User zu authentifizieren.</p>
+  </div>
+  <div class="content-container">
+    <button *ngIf="!authenticatedSuccessful && !authenticationFailed" class="button button-primary" (click)="onAuthenticate()">Passwortlos authentifizieren</button>
+    <p *ngIf="authenticatedSuccessful" class="successMessage">Deine Identität wurde bestätigt.</p>
+    <p *ngIf="authenticationFailed" class="errorMessage">Authentifizierung fehlgeschlagen.</p>
+  </div>
+</div>

@@ -1,10 +1,20 @@
-<a routerLink="/home">zurück</a>
 
-<h2>Zugriff auf GPS</h2>
-<button (click)="onGetCoordinates()">Standort anzeigen</button>
-<div *ngIf="buttonClicked">
-  <p>Längengrad: {{longitude}}</p>
-  <p>Breitengrad: {{latitude}}</p>
-  <p>Genauigkeit: {{accuracy}}m</p>
+
+
+<div class="main-container">
+  <a class="home" routerLink="/home">&#8678;</a>
+  <div class="header-container">
+    <p class="main-header">Zugriff auf GPS</p>
+    <p class="instruction">Klicke den Button, um deinen aktuellen Standort zu ermitteln.</p>
+  </div>
+
+  <div class="content-container">
+    <button class="button button-primary" (click)="onGetCoordinates()">Standort anzeigen</button>
+    <div *ngIf="buttonClicked">
+      <p>Längengrad: {{longitude}}</p>
+      <p>Breitengrad: {{latitude}}</p>
+      <p>Genauigkeit: {{accuracy}}m</p>
+    </div>
+  </div>
 </div>
 

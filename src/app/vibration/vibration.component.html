@@ -1,4 +1,11 @@
-<a routerLink="/home">zurück</a>
+<div class="main-container">
+  <a class="home" routerLink="/home">&#8678;</a>
+  <div class="header-container">
+    <p class="main-header">Zugriff auf Vibrationsaktor</p>
+    <p class="instruction">Klicke den Button, um eine Vibration auszulösen. Sollte dein Gerät keine Vibration anbieten, geschieht nichts.</p>
+  </div>
 
-<h2>Vibrationsaktor</h2>
-<button (click)="onVibrate()">Vibrieren</button>
+  <div class="content-container">
+    <button class="button button-primary" (click)="onVibrate()">Vibrieren</button>
+  </div>
+</div>
