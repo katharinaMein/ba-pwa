@@ -31,7 +31,7 @@ export class NotificationsComponent implements OnInit {
   };
 
   showMyNotification(body: string){
-    const title = 'Deine Check Mobile Push-Notification';
+    const title = 'Deine Check Mobile Notification';
     const payload = {
       body: body
     };
