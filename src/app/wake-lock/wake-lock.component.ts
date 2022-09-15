@@ -12,10 +12,16 @@ export class WakeLockComponent implements OnInit {
   activatedText: string = 'Screen Wake Lock ist nun aktiviert. Der Bildschirm sperrt sich nicht mehr.'
   deactivatedText: string = 'Screen Wake Lock ist gerade nicht aktiviert. Der Bildschirm sollte sich nach einer gewissen Zeit sperren.'
   infoText: string = this.deactivatedText;
+  wakeLockAvailable = false;
 
   constructor() { }
 
   ngOnInit(): void {
+    if ('wakeLock' in navigator) {
+      this.wakeLockAvailable = true;
+    } else {
+      this.wakeLockAvailable = false;
+    }
   }
 
   ngOnDestroy(): void {

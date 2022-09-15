@@ -2,10 +2,11 @@
   <a class="home" routerLink="/home">&#8678;</a>
   <div class="header-container">
     <p class="main-header">Screen Wake Lock</p>
-    <p class="instruction">Klicke den Button, um Screen Wake Lock zu aktivieren und wieder zu deaktivieren.</p>
+    <p *ngIf="wakeLockAvailable" class="instruction">Klicke den Button, um Screen Wake Lock zu aktivieren und wieder zu deaktivieren.</p>
+    <p *ngIf="!wakeLockAvailable" class="instruction">Die Screen Wake Lock Funktion ist in diesem Browser nicht verfügbar.</p>
   </div>
   <div class="content-container">
-    <button class="button button-primary" (click)="onToggleWakeLock()">{{button.text}}</button>
+    <button class="button button-primary" [ngClass]="wakeLockAvailable ? 'button-primary' : 'button-disabled'" (click)="onToggleWakeLock()">{{button.text}}</button>
     <p class="infoText">{{infoText}}</p>
   </div>
 </div>
