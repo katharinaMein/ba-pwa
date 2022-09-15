@@ -13,7 +13,7 @@
     <div *ngIf="buttonClicked">
       <p>Längengrad: {{longitude}}</p>
       <p>Breitengrad: {{latitude}}</p>
-      <p>Genauigkeit: {{accuracy}}m</p>
+      <p>Genauigkeit: {{accuracy | number:'1.0-2'}}m</p>
     </div>
   </div>
 </div>
