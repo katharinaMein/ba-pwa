@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-push-notifications',
-  templateUrl: './push-notifications.component.html',
-  styleUrls: ['./push-notifications.component.less']
+  selector: 'app-notifications',
+  templateUrl: './notifications.component.html',
+  styleUrls: ['./notifications.component.less']
 })
-export class PushNotificationsComponent implements OnInit {
+export class NotificationsComponent implements OnInit {
   private registration?: ServiceWorkerRegistration;
 
   constructor() { }

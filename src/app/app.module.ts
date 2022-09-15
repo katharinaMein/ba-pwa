@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
 import { OfflineUsageComponent } from './offline-usage/offline-usage.component';
 import { CameraComponent } from './camera/camera.component';
 import { MicrophoneComponent } from './microphone/microphone.component';
-import { PushNotificationsComponent } from './push-notifications/push-notifications.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 import { BluetoothComponent } from './bluetooth/bluetooth.component';
 import { LocalFilesComponent } from './local-files/local-files.component';
 import { ShareComponent } from './share/share.component';
@@ -30,7 +30,7 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     OfflineUsageComponent,
     CameraComponent,
     MicrophoneComponent,
-    PushNotificationsComponent,
+    NotificationsComponent,
     BluetoothComponent,
     LocalFilesComponent,
     ShareComponent,
