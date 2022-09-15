@@ -7,6 +7,6 @@
   </div>
   <div class="content-container">
     <button class="button button-primary" [ngClass]="wakeLockAvailable ? 'button-primary' : 'button-disabled'" (click)="onToggleWakeLock()">{{button.text}}</button>
-    <p class="infoText">{{infoText}}</p>
+    <p *ngIf="wakeLockAvailable" class="infoText">{{infoText}}</p>
   </div>
 </div>
