@@ -25,7 +25,9 @@ export class WakeLockComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    this.onReleaseWakeLock();
+    if (this.wakeLock) {
+      this.onReleaseWakeLock();
+    }
   }
 
   async onToggleWakeLock(){
